@@ -1,5 +1,6 @@
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,29 +23,29 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <a href="#home" className="hover:text-white">
+              <Link to="/#home" className="hover:text-white">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about" className="hover:text-white">
+              <Link to="/#about" className="hover:text-white">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#skills" className="hover:text-white">
+              <Link to="/#skills" className="hover:text-white">
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#experience" className="hover:text-white">
+              <Link to="/#experience" className="hover:text-white">
                 Experience
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="hover:text-white">
+              <Link to="/contact" className="hover:text-white">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

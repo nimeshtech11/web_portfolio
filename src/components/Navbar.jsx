@@ -1,58 +1,63 @@
+import { Link, useNavigate, useLocation } from "react-router-dom";
+
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLogoClick = () => {
+    if (location.pathname === "/") {
+      // Already on home page → scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Navigate to home
+      navigate("/");
+    }
+  };
   return (
     <nav className="w-full fixed top-0 left-0 z-50 bg-white shadow-md py-4 px-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="w-32 cursor-pointer">
-          <a href="#home">
+        <div className="w-32 cursor-pointer" onClick={handleLogoClick}>
+          <Link to="/">
             <img
               src="/logo1.PNG"
               alt="Logo"
               className="w-full object-contain"
             />
-          </a>
+          </Link>
         </div>
 
-        {/* Nav Links & Button */}
+        {/* Nav Links */}
         <div className="hidden md:flex items-center gap-6">
           <ul className="flex gap-6">
-            <li className="">
-              <a
-                href="#about"
-                className="text-gray-700 text-base font-medium hover:text-blue-500 transition-all duration-200">
+            <li>
+              <Link to="/#about" className="hover:text-blue-500 transition">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#skills"
-                className="text-gray-700 text-base font-medium hover:text-blue-500 transition-all duration-200">
+              <Link to="/#skills" className="hover:text-blue-500 transition">
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#experience"
-                className="text-gray-700 text-base font-medium hover:text-blue-500 transition-all duration-200">
+              <Link
+                to="/#experience"
+                className="hover:text-blue-500 transition">
                 Work
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#contact"
-                className="text-gray-700 text-base font-medium hover:text-blue-500 transition-all duration-200">
+              <Link to="/projects" className="hover:text-blue-500 transition">
+                My Projects
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-blue-500 transition">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
-
-          {/* Download CV Button */}
-          <a
-            href="\Nimesh WebFE.pdf"
-            download
-            className="ml-4 px-4 py-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-all duration-200">
-            Download CV
-          </a>
         </div>
       </div>
     </nav>

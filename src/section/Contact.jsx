@@ -38,7 +38,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="pt-24 pb-16 mt-16 bg-emerald-50" id="contact">
+    <section className="pt-10 pb-16 mt-20 bg-emerald-50 " id="contact">
       <ToastContainer />
       <div className="text-center mb-8">
         <h1 className="inline-block bg-gray-200 py-2 px-6 rounded-lg text-3xl font-bold text-gray-800 shadow-md">

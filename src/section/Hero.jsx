@@ -1,7 +1,6 @@
 import { MapPin } from "lucide-react";
-import { Dot } from "lucide-react";
-import { PiGithubLogoBold } from "react-icons/pi";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -25,27 +24,22 @@ const HeroSection = () => {
             <span>Bhopal, Madhya Pradesh, India</span>
           </div>
 
-          <div className="flex items-center gap-2 text-gray-700">
+          <div className="flex items-center gap-4 text-gray-700">
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
             <span> Available for Full-Time / Freelance</span>
           </div>
 
-          <div className="flex items-center gap-6 mt-4">
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link to="/contact">
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-blue-700 transition-all">
+                Hire Me
+              </button>
+            </Link>
             <a
-              href="https://github.com/nimeshdev11"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-800 hover:text-black transition">
-              <PiGithubLogoBold className="text-2xl" />
-              <span className="font-medium">GitHub</span>
-            </a>
-            <a
-              href="https://linkedin.com/in/nimesh-thakur-5976a127a"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-800 hover:text-blue-600 transition">
-              <FaLinkedinIn className="text-2xl" />
-              <span className="font-medium">LinkedIn</span>
+              href="/Nimesh WebFE.pdf"
+              download
+              className="bg-gray-200 text-gray-800 px-6 py-3 rounded-xl shadow-md hover:bg-gray-300 transition-all dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
+              Download Resume <FaArrowRight className="inline ml-2" />
             </a>
           </div>
         </div>
