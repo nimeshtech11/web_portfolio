@@ -48,7 +48,7 @@ const Navbar = () => {
 
           {/* Download CV Button */}
           <a
-            href="\Nimesh FE .pdf"
+            href="\Nimesh WebFE.pdf"
             download
             className="ml-4 px-4 py-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-all duration-200">
             Download CV
