@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="p-5 pt-24 mt-16" id="home">
+    <section className="pt-24 mt-16" id="home">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-10">
         {/* Text Content */}
         <div className="flex flex-col gap-4 w-full md:w-1/2">
@@ -14,7 +14,7 @@ const HeroSection = () => {
           <p className="text-lg md:text-2xl text-gray-700 text-justify">
             I'm a passionate Front-End Developer with 3 years of hands-on
             experience building responsive, user-friendly web applications using
-            <span className="font-semibold text-blue-600"> React</span> and
+            <span className="font-semibold text-blue-400"> React</span> and
             <span className="font-semibold text-purple-600"> Redux</span>. I
             love crafting clean UI and delivering seamless user experiences.
           </p>
@@ -31,14 +31,14 @@ const HeroSection = () => {
 
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/contact">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-blue-700 transition-all">
+              <button className="bg-blue-400 text-white font-bold px-6 py-3 rounded-xl shadow-md hover:bg-blue-600 transition-all cursor-pointer">
                 Hire Me
               </button>
             </Link>
             <a
               href="/Nimesh WebFE.pdf"
               download
-              className="bg-gray-200 text-gray-800 px-6 py-3 rounded-xl shadow-md hover:bg-gray-300 transition-all dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
+              className="bg-gray-200 font-bold text-gray-800 px-6 py-3 rounded-xl shadow-md hover:bg-gray-300 transition-all dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
               Download Resume <FaArrowRight className="inline ml-2" />
             </a>
           </div>
